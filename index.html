@@ -585,12 +585,22 @@ print(round(volumen,2))</code>
         </div>
 
 <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>Cree un programa en Python 3 que le solicite al usuario dos números enteros los cuales serán los catetos de un triángulo rectángulo , y luego calcule el valor de la hipotenusa,  El programa debe mostrar como resultado exclusivamente el el valor de la hipotenusa aproximado a una cifra decimal, no debe contener letras ni enunciados que lo acompañen.
+
+Nota: Recuerde que la raiz cuadrada es equivalente a elevar el número a la 1/2.
+
+por ejemplo si el usuario ingresa los números 3 y 2, el programa debe mostrar:
+
+3.6</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+cateto1 = int(input())
+cateto2 = int(input())
+operacion = pow(cateto1,2)+pow(cateto2,2)
+hipotenusa = pow(operacion,(1/2))
+print(round(hipotenusa,1))</code>
             </pre>
         </div>
 
