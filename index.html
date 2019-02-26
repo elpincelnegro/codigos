@@ -626,12 +626,43 @@ print(round(area_superficial,2))</code>
         </div>
 
 <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>Cree un subrograma en Python 3 llamado producto.py, con una función llamada prod que calcula el producto de dos matrices. Dicha función recibe como argumentos dos matrices y retorna como resultado el producto de las dos matrices. Además, cree un programa en Python 3.4 llamado main.py, que le solicite al usuario dos matrices, las utilice como argumentos de la funcion en el subprograma, y muestre el resultado del producto matricial (cada fila en una linea diferente). Muestre exclusivamente lo solicitado anteriormente sin enunciados extra que lo acompañen
+
+Producto de matrices [a  b] * [e  f] = [a*e+b*g   a*f+b*h]
+                                   [c  d]   [g  h]   [c*e+d*g    c*f+d*h]
+
+Utilce el comando eval para convertir un string en una matriz
+
+Nota: En VPL de Moodle debe estar primero el archivo del programa y luego el del subprograma.
+
+Por ejemplo, si el usuario ingresa la matriz [[0, 6], [6, 6]] y la matriz [[3, 4], [8, 1]], el programa debe mostrar:
+
+[48, 6]
+[66, 30]</span>
         </div>
         <div class="codigo">
+        <h1>main.py</h1>
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+import producto
+matriz1 = eval(input())
+matriz2 = eval(input())
+producto.prod(matriz1,matriz2)</code>
+            </pre>
+        </div>
+        <div class="codigo">
+        <h1>producto.py</>
+            <pre>
+                <code>
+def prod(matriz1,matriz2):
+    for i in range(len(matriz1)):
+        final = []
+        for j in range(len(matriz1)):
+            p = 0
+            for k in range(len(matriz1)):
+                p += matriz1[i][k]*matriz2[k][j]
+            final = final+[p]
+        print(final)</code>
             </pre>
         </div>
 
