@@ -727,22 +727,53 @@ print(mayor)</code>
         </div>
 
 <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>Cree una función en python 3 llamada Clima, que reciba como parámetro una lista con una cantidad desconocida de elementos (Todos numéricos), dichos elementos corresponden a las temperaturas de los últimos días en alguna ciudad. La función debe calcular la temperatura promedio, si la temperatura promedio es por lo menos 25.6, debe imprimir por pantalla "Calor", en caso contrario, imprima por pantalla "Frio".
+
+
+NOTA1: La función debe llamarse explicitamente como se indica en el enunciado del ejercicio.
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: El código solicitado no requiere lectura externa de datos (input) ni invocar la función.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+def Clima(lista):
+    temperatura = sum(lista)/len(lista)
+    if temperatura >= 25.6:
+        print("Calor")
+    else:
+        print("Frio")</code>
             </pre>
         </div>
 
 <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>Un analista de datos quiere conocer los resultados de un equipo de fútbol durante una temporada. Para esto tiene una lista con los resultados obtenidos por el equipo en la temporada "G"-> Ganador, "P"-> perdedor, "E"->Empate. ejemplo: ["G","E","P"]. El analista de datos debe obtener la cantidad de puntos que hizo el equipo en la temporada, considerando que por partido ganado recibe 3 puntos y por partido empatado recibe 1 punto. Finalmente, si un equipo hace menos de 12 puntos en una temporada, desciende, en caso contrario permanece. Cree una función en python 3 llamada Resultados, que reciba como parámetro una lista con los resultados de la temporada de un equipo. La función debe calcular los resultados y finalmente imprimir una lista compuesta por la cantidad de puntos que hizo el equipo y en segunda posición debe contener un texto "Desciende" o "Permanece" según el caso.
+
+NOTA1: La función debe llamarse explicitamente como se indica en el enunciado del ejercicio.
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+ NOTA3: El código solicitado no requiere lectura externa de datos (input) ni invocar la función.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+def Resultados(lista):
+    puntos = 0
+    lista = []
+    for i in lista:
+        if i =="G":
+            puntos+=3
+        if i=="E":
+            puntos+=1
+    if puntos<12:
+        lista +=["Desciende"]
+        print(lista)
+    else:
+        lista +=["Permanece"]
+        print(lista)</code>
             </pre>
         </div>
 
