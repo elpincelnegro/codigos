@@ -293,14 +293,15 @@ NOTA: El mensaje al solicitar la entrada debe ser: "Ingrese una lista \n", tal c
             <pre>
                 <code>
 lista = eval(input("Ingrese una lista \n"))
-res = []
-for i in range(len(lista)):
-    for j in range(len(lista)):
-        if lista[i]==lista[j] and i!=j and lista[i]!="a":
-            res = res+[lista[i]]
-            lista[i] = "a"
-            lista[j] = "a"
-print(res)</code>
+l1=[]
+l2=[]
+for i in lista:
+    if lista.count(i) > 1:
+        l1.append(i)
+        for e in l1:
+          if e not in l2:
+            l2.append(e)
+print(l2)</code>
             </pre>
         </div>
         
