@@ -667,22 +667,62 @@ def prod(matriz1,matriz2):
         </div>
 
 <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>.Sara esta probando un nuevo método de lectura rápida que le recomendaron. De un texto, solo se fijara en las palabras que contienen mínimo 2 letras "a", guardara dichas palabras en una lista y luego las imprimirá por pantalla unas tras otra con el string " !! " como separador de cada una de ellas. Cree un programa en python 3 que solicite el texto M por consola y pruebe el método de lectura rápida de Sara.
+
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un texto \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "texto".
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+p = (input("Ingrese un texto \n").split(" "))
+lista = ""
+for i in p:
+    c = 0
+    for j in range(len(i)):
+      if i[j]=="a":
+        c+=1
+      if c==2:
+        lista +=" !! "+(i)
+        break
+print(lista.strip()[3:len(lista)])</code>
             </pre>
         </div>
 
 <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>Escriba un programa en python 3 que solicite un numero indefinido de palabras (Todas las entradas son en minúscula), hasta que se le ingrese la palabra "fin". El programa debe guardar todas las palabras en una lista (sin la palabra "fin"). Posteriormente el programa debe imprimir la lista entera y en otra linea la palabra de la lista que con tiene mayor cantidad de "a".
+
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese una palabra \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "palabra".
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+p = input("Ingrese una palabra \n")
+lista = []
+ma = -1000
+mayor = ""
+while(p != "fin"):
+    lista +=[p]
+    p = input("Ingrese una palabra \n")
+print(lista)
+for i in lista:
+    c = 0
+    for j in range(len(i)):
+      if i[j]=="a":
+        c+=1
+    if c > ma:
+        ma = c
+        mayor = i
+print(mayor)</code>
             </pre>
         </div>
 
