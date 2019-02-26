@@ -578,9 +578,9 @@ No deje espacios en blanco en el nombre del archivo. Si el nombre del archivo co
         <div class="codigo">
             <pre>
                 <code>
-radio = input()
-volumen = int(radio)*int(radio)*int(radio)*4/3*float(3.14)
-print(volumen)</code>
+radio = int(input())
+volumen = pow(radio,3)*4/3*3.14
+print(round(volumen,2))</code>
             </pre>
         </div>
 
