@@ -605,12 +605,23 @@ print(round(hipotenusa,1))</code>
         </div>
 
 <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>Cree un programa en Python 3 que le solicite al usuario la altura de un cilindro y el radio de su base,  y luego calcule el área del cilindro tapado.  El programa debe mostrar como resultado exclusivamente el área total del cilindro redondeada a dos cifras decimales, no debe contener letras ni enunciados que lo acompañen.
+
+Nota: usar pi como 3.14 (pi=3.14).
+
+por ejemplo si el usuario ingresa una altura de  8 y un radio de la base de 3, el programa debe mostrar: 
+
+207.24</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+altura = int(input())
+radio = int(input())
+operacion1 = 2*altura*3.14*radio
+operacion2 = 2*3.14*pow(radio,2)
+area_superficial = operacion1 + operacion2
+print(round(area_superficial,2))</code>
             </pre>
         </div>
 
