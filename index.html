@@ -530,10 +530,7 @@ Nota: El mensaje al solicitar la entrada debe ser: "Ingrese una palabra \n", tal
                 <code>
 p = input("Ingrese una palabra \n")
 for i in range(len(p)):
-    c = 1
-    for j in range(len(p)):
-        if p[i]==p[j] and i!=j:
-            c+=1
+    c = p.count(p[i])
     print([p[i]]+[c])</code>
             </pre>
         </div>
