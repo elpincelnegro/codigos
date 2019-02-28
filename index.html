@@ -796,22 +796,49 @@ print(a)</code>
         </div>
         
         <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>El dueño de una empresa quiere calcular las ventas totales durante un mes. Para esto, el dueño cuenta con una matriz donde sus filas representan semanas del mes, dichas filas contienen las ventas de cada día de esas semanas en que la empresa trabajó. Cree una funcion en python 3 llamada Ventas que reciba como parámetro una matriz con las ventas de la empresa, realice la sumatoria total de las ventas y si el total de ventas es mayor a 100000, imprima por pantalla la lista de ventas de la primera semana, en caso contrario imprima por pantalla la lista de ventas de la ultima semana.
+
+NOTA1: La función debe llamarse explicitamente como se indica en el enunciado del ejercicio.
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: El código solicitado no requiere lectura externa de datos (input) ni invocar la función.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+def Ventas(matriz):
+    m = 0
+    for i in range(len(matriz)):
+        m+=sum(matriz[i])
+    if m>100000:
+        print(matriz[0])
+    else:
+        print(matriz[len(matriz)-1])</code>
             </pre>
         </div>
         
         <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>Cree un programa en python 3 que solicite por consola un entero M y una lista N. Posteriormente, usando el manejo de errores, imprima sucesivamente por pantalla el resultado de elevar cada uno de los elemento de N al número M. En caso de que el elemento de N sea un string, el mensaje de error que se debe mostrar es "No valido" e imprimir el valor del elemento de N.
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un numero entero \n", "Ingrese una lista \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero", "lista.
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+M=int(input("Ingrese un numero entero \n"))
+N=eval(input("Ingrese una lista \n"))
+for i in range(len(N)):
+    try:
+        l = pow(N[i],M)
+        print(l)
+    except:
+        print("No valido")
+        print(N[i])</code>
             </pre>
         </div>
         
