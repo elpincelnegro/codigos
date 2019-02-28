@@ -843,12 +843,26 @@ for i in range(len(N)):
         </div>
         
         <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>Cree un programa en python 3 que solicite por consola un entero M y una lista N. Posteriormente, usando el manejor de errores imprima sucesivamente por pantalla la división entera de cada uno de los elementos de la lista N entre el entero M. En caso de que el elemento de N sea un string, el mensaje de error que se debe mostrar es "No valido". En caso de que haya alguna división por cero, el mensaje de error debe ser "No se puede dividir por cero".
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un numero entero \n", "Ingrese una lista \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero", "lista.
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+M=int(input("Ingrese un numero entero \n"))
+N=eval(input("Ingrese una lista \n"))
+for i in N:
+  try:
+    print(i//M)
+  except ZeroDivisionError:
+    print("No se puede dividir por cero")  
+  except:
+    print("No valido")</code>
             </pre>
         </div>
         
