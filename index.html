@@ -867,12 +867,148 @@ for i in N:
         </div>
         
         <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>Una maestra quiere diseñar un programa que corrija rápidamente las faltas ortográficas de sus estudiantes en las palabras terminadas en "ción" a las cuales no les pongan tilde. Cree un programa en python que solicite por consola un texto M, busque las palabras terminadas en "ción" ( en cualquier presentación "Ción", "CIÓN","CIÓn", etc) que NO esten tildadas, ponga en mayúscula toda la palabra no tildada. Finalmente imprima el nuevo texto en minúscula por pantalla, exceptuando las palabras corregidas que se imprimen en mayúscula .
+
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un texto \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "texto".
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
---------------------------Codigo aquí----------------------------------</code>
+p = input("Ingrese un texto \n").lower()
+p = p.split()
+for i in range(len(p)):
+  if (p[i])[-4:]=="cion":
+    p[i] = p[i].upper()
+print(" ".join(p))    
+</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número real. Si el número real, es igual a su valor entero, por ejemplo (3.0 tiene un valor entero de 3), imprima "Es entero"  y cálcule el residuo de la división por 5, si el residuo de la división por 5 es 0, imprima "Es divisible", sino imprima "No es divisible". SI no es igual a su valor entero imprima "No es entero".
+
+NOTA: Para solicitar el número real, hágalo con el mensaje "Ingrese un numero real: \n".
+
+NOTA2: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+Escriba un programa en python 3 que solicite por consola un número real. Si el número real, es igual a su valor entero, por ejemplo (3.0 tiene un valor entero de 3), imprima "Es entero"  y cálcule el residuo de la división por 5, si el residuo de la división por 5 es 0, imprima "Es divisible", sino imprima "No es divisible". SI no es igual a su valor entero imprima "No es entero".
+
+NOTA: Para solicitar el número real, hágalo con el mensaje "Ingrese un numero real: \n".
+
+NOTA2: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>N = float(input("Ingrese un numero real: \n"))
+if N == int(N):
+  print("Es entero")
+  residuo = N%5
+  if N==0:
+    print("Es divisible")
+  else:
+    print("No es divisible")
+else:
+  print("No es entero")      
+</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+Cree un programa en python 3 que solicite por teclado dos diccionarios M,N con los datos de 2 personas: "Nombre", "Cedula" y "Telefono". Posteriormente, imprima por pantalla la secuencia de datos de la primera persona, luego la secuencia de datos de la segunda persona. En caso de que la persona no haya proporcionado algún dato (La clave no exista), el mensaje de error que se debe mostrar es: "Dato no proporcionado"
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un diccionario \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "diccionario".
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite por teclado dos diccionarios M,N con los datos de 2 personas: "Nombre", "Cedula" y "Telefono". Posteriormente, imprima por pantalla la secuencia de datos de la primera persona, luego la secuencia de datos de la segunda persona. En caso de que la persona no haya proporcionado algún dato (La clave no exista), el mensaje de error que se debe mostrar es: "Dato no proporcionado"
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un diccionario \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "diccionario".
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+persona1 = eval(input("Ingrese un diccionario \n"))
+persona2 = eval(input("Ingrese un diccionario \n"))
+datos = ["Nombre","Cedula","Telefono"]
+for i in datos:
+  try:
+    print(persona1[i])
+  except:
+    print("Dato no proporcionado")  
+for i in datos:
+  try:
+    print(persona2[i])
+  except:
+    print("Dato no proporcionado")   
+</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola una lista N, luego utilice la lista ingresada en el siguiente ejercicio: 
+
+Cuente la cantidad de elementos en la lista. Si la cantidad de elementos es por lo menos 4, sume los dos primeros elementos y añadalos al final de la lista, luego imprima la lista. En caso contrario, intercambie los elementos de la primera y la ultima posición de la lista e imprimala.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese una lista \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+lista = eval(input("Ingrese una lista \n"))
+elementos = len(lista)
+if elementos>=4:
+  suma = lista[0]+lista[1]
+  lista.append(suma)
+  print(lista)
+else:
+  el = lista[0]
+  lista[0] = lista[len(lista)-1]
+  lista[len(lista)-1] = el
+  print(lista)  </code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Cree una función en python 3 llamada Resta que reciba dos parámetros, correspondientes a dos matrices. La función debe efectuar la resta de dichas matrices e imprimir la matriz resultante. En caso de que las matrices no puedan ser sumadas, el mensaje de error que se debe mostrar es "No se pueden restar estas matrices".
+
+NOTA1: La función debe llamarse explicitamente como lo indica el ejercicio.
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+def Resta(matriz1,matriz2):
+  t1 = len(matriz1)
+  a1 = len(matriz1[0])
+  t2 = len(matriz2)
+  a2 = len(matriz2[0])
+  if t1!=t2 or a1!=a2:
+    print("No se pueden restar estas matrices")
+  else:
+    for i in range(len(matriz1)):
+      for j in range(len(matriz1[i])):
+        matriz1[i][j] = matriz1[i][j]+matriz2[i][j]
+    print(matriz1)</code>
             </pre>
         </div>
     </body>
