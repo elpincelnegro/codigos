@@ -985,6 +985,31 @@ def Resta(matriz1,matriz2):
   else:
     for i in range(len(matriz1)):
       for j in range(len(matriz1[i])):
+        matriz1[i][j] = matriz1[i][j]-matriz2[i][j]
+    print(matriz1)</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Cree una función en python 3 llamada Suma que reciba dos parámetros, correspondientes a dos matrices. La función debe efectuar la suma de dichas matrices e imprimir la matriz resultante. En caso de que las matrices no puedan ser sumadas, el mensaje de error que se debe mostrar es "No se pueden sumar estas matrices".
+
+NOTA1: La función debe llamarse explicitamente como lo indica el ejercicio.
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>def Suma(matriz1,matriz2):
+  t1 = len(matriz1)
+  a1 = len(matriz1[0])
+  t2 = len(matriz2)
+  a2 = len(matriz2[0])
+  if t1!=t2 or a1!=a2:
+    print("No se pueden sumar estas matrices")
+  else:
+    for i in range(len(matriz1)):
+      for j in range(len(matriz1[i])):
         matriz1[i][j] = matriz1[i][j]+matriz2[i][j]
     print(matriz1)</code>
             </pre>
