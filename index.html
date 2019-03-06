@@ -1245,38 +1245,159 @@ print((70000*n) if n<=40 else ((n//40)*40*70000+((n-(n//40)*40)*60000)))</code>
         
         
         <div class="card-panel">
-            <span>-----------enunciado------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola una lista N con 2 elementos, luego utilice la lista ingresada en el siguiente ejercicio:
+
+El primer elemento de la lista N corresponde a la medida del lado de un triangulo, el segundo elemento corresponde a la medida de otro lado del mismo triangulo, la medida del tercer lado del triangulo es la mitad de la medida del primer lado más el segundo lado. Calcule el perimetro de dicho triangulo, ingreselo al final de la lista aproximado a una cifra decimal y si el perimetro aproximado es mayor que 20, imprima por pantalla la lista. En caso contrario, ingrese tambien al final de la lista el texto "Menor" y luego imprimala.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese una lista \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------codigo------------</code>
+N = eval(input("Ingrese una lista \n"))
+perimetro = round(N[0]+N[1]+(N[0]/2+N[1]),1)
+N.append(perimetro)
+print(N if perimetro>20 else N+["Menor"] )</code>
             </pre>
         </div>
         
         
         <div class="card-panel">
-            <span>-----------enunciado------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros N y M, luego utilice los números ingresados en el siguiente ejercicio:
+
+Para obtener el grado de eficiencia de un operario de una fábrica de tornillos, se utilizan las siguientes condiciones, que se le imponen para un período de prueba:
+
+     Menos de 200 tornillos defectuosos.
+     Más de 10000 tornillos producidos.
+
+El grado de eficiencia se determina de la siguiente manera:
+
+    Si no cumple ninguna de las condiciones, "Grado 5".
+    Si sólo cumple la primera condición, "Grado 6".
+    Si sólo cumple la segunda condición, "Grado 7".
+    Si cumple las dos condiciones, "Grado 8".
+
+Imprima el grado de eficiencia de un operario que tiene N tornillos defectuosos y M tornillos producidos.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Asegúrese de imprimir las salidas como lo indica los ejemplos. Tenga en cuenta las mayúsculas, minúsculas y espacios que se indican para el texto de salida.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------codigo------------</code>
+N = int(input("Ingrese un numero entero \n"))
+M = int(input("Ingrese un numero entero \n"))
+if N<200 and N>10000:
+    print("Grado 8")
+elif N<200:
+    print("Grado 6")
+elif M>10000:
+    print("Grado 7")
+else:
+    print("Grado 5") </code>
             </pre>
         </div>
         
         
         <div class="card-panel">
-            <span>-----------enunciado------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego encuentre los primeros N cuadrados perfectos e imprímalos en una lista.
+
+NOTA: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "real".</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------codigo------------</code>
+N = int(input("Ingrese un numero entero \n"))
+lista = []
+for i in range(n):
+    lista.append(i**2)
+print(lista)</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Escriba un programa en Python 3 que solicite un texto por consola que corresponde a un número binario, por ejemplo "1010", y calcule e imprima su respectiva conversión a decimal entero.
+
+NOTA: Los textos con los números binarios pueden tener longitud variable.
+
+NOTA2: Para solicitar el primer texto hágalo con el mensaje "Ingrese un texto: \n".</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+print(int((input("Ingrese un texto: \n")),2))</code>
             </pre>
         </div>
         
         
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos palabras N y M, luego utilice las palabras ingresadas en el siguiente ejercicio:
+
+Imprima el siguiente texto para indicar cuál de las dos palabras es la más larga y por cuántas letras lo es:
+
+    En caso de que la palabra N sea la más larga: "La palabra N tiene # letras mas que M"
+    En caso de que la palabra M sea la más larga: "La palabra M tiene # letras mas que N"
+    En caso de que las dos palabras tengan el mismo largo: "Las dos palabras tienen el mismo largo"
+
+Para imprimir el texto, reemplace N, M y # según las dos palabras ingresadas.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese una palabra \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "palabra".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Asegúrese de imprimir las salidas como lo indica los ejemplos. Tenga en cuenta las mayúsculas, minúsculas y espacios que se indican para el texto de salida.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = input("Ingrese una palabra \n")
+M = input("Ingrese una palabra \n")
+if len(N)==len(M):
+    print("Las dos palabras tienen el mismo largo")
+elif len(N)>len(M):
+    print("La palabra "+N+" tiene "+str(len(N)-len(M))+" letras mas que "+M)
+else:
+    print("La palabra "+M+" tiene "+str(len(M)-len(N))+" letras mas que "+N)</code>
+            </pre>
+        </div>
+        
+        
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        
+        
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        
+        
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
 
 
 
