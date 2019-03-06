@@ -1163,23 +1163,120 @@ else:
             </pre>
         </div>
         <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Oscar ha comprado 2 colecciones de libros por N pesos en total. La primera colección consta de 15 libros y cada uno Ie ha costado 35.000 pesos. La segunda colección consta de 12 libros. Calcule e imprima el valor en pesos que cuesta cada libro de la segunda colección aproximado a DOS cifras decimales.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+NOTA3: Redondear la respuesta a dos cifras decimales. Utilice la función round().</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+print(round(((int(input("Ingrese un numero entero \n")))-525000)/12,2))</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>--------------------Enunciado aquí--------------------------</span>
+            <span>.Escriba un programa en python 3 que solicite por consola una lista númerica N y luego utilice la lista ingresada en el siguiente ejercicio: Cuente la cantidad de elementos de la lista N. Si la cantidad es un número par, obtenga el primer elemento de la lista. Si el primer elemento de la lista es par, elevelo al cuadrado e imprimalo por pantalla. Si el primer elemento no es par,imprimalo por pantalla. En caso de que la cantidad de elementos no sea par, imprima el ultimo elemento de la lista
+
+NOTA1: El mensaje al solicitar la entradas debe ser: "Ingrese una lista \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Las salidas deben ser números enteros.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
----------------------------Codigo aquí----------------------------------</code>
+lista=eval(input("Ingrese una lista \n"))
+if (len(lista))%2==0:
+    if (lista[0])%2==0:
+        lista[0]*=lista[0]
+        print(lista[0])
+    else:
+        print(lista[0])
+else:
+    print(lista[len(lista)-1])</code>
             </pre>
         </div>
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego calcule la suma de los primeros N cuadrados perfectos e imprima dicha suma.
+
+NOTA: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "real".</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = int(input("Ingrese un numero entero \n"))
+suma = 0
+for i in range(N):
+    suma+=i**2
+print(suma)</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Un arquitecto quiere calcular su salario semanal, el cual se obtiene de la siguiente manera:
+
+Si trabaja 40 horas o menos, se le paga $70000 por hora.
+
+Si trabaja más de 40 horas se le paga $70000 por cada una de las primeras 40 horas y $60000 por cada hora extra.
+
+Suponiendo que el arquitecto ha trabajado N horas semanales, calcule e imprima el total del salario semanal.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Como se evidencia en los casos de prueba, el número que se debe imprimir es entero.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n = int(input("Ingrese un numero entero \n"))
+print((70000*n) if n<=40 else ((n//40)*40*70000+((n-(n//40)*40)*60000)))</code>
+            </pre>
+        </div>
+        
+        
+        <div class="card-panel">
+            <span>-----------enunciado------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+---------------------codigo------------</code>
+            </pre>
+        </div>
+        
+        
+        <div class="card-panel">
+            <span>-----------enunciado------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+---------------------codigo------------</code>
+            </pre>
+        </div>
+        
+        
+        <div class="card-panel">
+            <span>-----------enunciado------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+---------------------codigo------------</code>
+            </pre>
+        </div>
+        
+        
 
 
 
