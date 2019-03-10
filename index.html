@@ -1701,7 +1701,265 @@ else:
             </pre>
         </div>
         <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola tres números enteros correspondientes a los tres lados de un triángulo. Si el triángulo es equilátero imprima "Equilatero", si el triángulo es isósceles imprima "Isosceles". Y si es escaleno imprima "Escaleno". Además, si el triángulo es isósceles, imprima el área redondeada a una cifra decimal; adicionalmente, si el área corresponde a un valor entero, imprima el cuadrado del área redondeada sin cifras decimales, de lo contrario si el área es mayor que 20, imprima "Es mayor", de lo contrario imprima "Es menor".
+
+NOTA: Para solicitar los números enteros hágalo con el mensaje "Ingrese un lado: \n".
+
+NOTA2: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+l1=int(input("Ingrese un lado: \n"))
+l2=int(input("Ingrese un lado: \n"))
+l3=int(input("Ingrese un lado: \n"))
+
+if l1==l2==l3:
+  print("Equilatero")
+elif l1==l2 and l2!=l3:
+  print("Isosceles")
+  area=round((((l3)*(((l1**2)-(((l3**2)/4)))**(1/2)))/2),1)
+  
+  if area%int(area)==0.0:
+    cua=area**2
+    print(area)
+    print(int(cua))
+  else:
+    if area>20:
+      print(area)
+      print("Es mayor")
+    else:
+      print(area)
+      print("Es menor")
+  
+elif l1==l3 and l3!=l2:
+  print("Isosceles")
+  area=round((((l2)*(((l1**2)-(((l2**2)/4)))**(1/2)))/2),1)
+  
+  if area%int(area)==0.0:
+    cua=area**2
+    print(area)
+    print(int(cua))
+  else:
+    if area>20:
+      print(area)
+      print("Es mayor")
+    else:
+      print(area)
+      print("Es menor")
+elif l2==l3 and l2!=l1:
+  print("Isosceles")
+  area=round((((l1)*(((l2**2)-(((l1**2)/4)))**(1/2)))/2),1)
+ 
+  if area%int(area)==0.0:
+    cua=area**2
+    print(area)
+    print(int(cua))
+  else:
+    if area>20:
+      print(area)
+      print("Es mayor")
+    else:
+      print(area)
+      print("Es menor")
+else:
+  print("Escaleno")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Una agencia de viajes está ayudando a un usuario a realizar una reserva en un lujoso hotel. El costo del alojamiento es de $ 500.000 por persona por noche. El usuario debe indicar la cantidad de personas que van a hospedarse y la cantidad de noches que se quedarán en el hotel. Hay una promocion del 33% de descuento para parejas que se queden al menos dos noches. Adicionalmente, aquellas parejas que se queden al menos seis noches, se les dará cada sexta noche gratis.
+
+Escriba un programa en python 3 que solicite por consola dos números enteros, que corresponden a la cantidad de personas y a la cantidad de noches que se quedarán respectivamente. Calcule e imprima el costo total de alojamiento, incluyendo los respectivos descuentos, redondeado a dos cifras decimales.
+
+NOTA: Los descuentos son acumulables. Aplicar el descuento del 33% al final de los demás descuentos. 
+
+NOTA2: Para solicitar los dos números enteros, hágalo con el mensaje "Ingrese un numero entero: \n".
+
+NOTA3: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+cantidad_de_personas=int(input("Ingrese un numero entero: \n"))
+cantidad_de_noches=int(input("Ingrese un numero entero: \n"))
+valor=500000
+costo=(cantidad_de_personas*valor)*cantidad_de_noches
+descuento=costo*0.33
+if cantidad_de_personas==2:
+  if cantidad_de_noches>=2 and cantidad_de_noches<6:
+    total=costo-descuento
+    print(round(total,2))
+  if cantidad_de_noches>=6:
+    n1=cantidad_de_noches//6
+    descuento1=cantidad_de_personas*valor*n1
+    x4=costo-descuento1
+    x5=x4-(x4*0.33)
+    print(round(x5,2))
+else:
+  print(round(costo,2))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span> Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Walter tiene 80.000 pesos más que el doble de lo que tiene Elio, a su vez Víctor tiene 30.000 pesos menos que el triple de lo que tiene Walter. Elio tiene N pesos. Calcule e imprima la cantidad de dinero en pesos que tienen los tres en total.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = int(input("Ingrese un numero entero \n"))
+elio = N
+walter = (2*elio)+80000
+vic = (3*walter)-30000
+tot = elio + walter + vic
+print(tot)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos textos, el primero corresponde a un género musical y el segundo a si es nuevo o antiguo. Si el primer texto es "rock", y el segundo es "antiguo" imprima "Angie". Si el primer texto es "reggaeton" y el segundo es "antiguo", imprima "Martes de galeria". Si el primer texto es "metal" y el segundo "antiguo" imprima "One". Si el primer texto es "rock" y el segundo es "nuevo" imprima "Believer". Si el primer texto es "reggaeton" y el segundo es "nuevo" imprima "Ambiente". Si el primer texto es "metal" y el segundo es "nuevo" imprima "Edge of the blade"
+
+NOTA: Para solicitar el primer texto hágalo con el mensaje "Ingrese un genero: \n".
+
+NOTA2: Para solicitar el segundo texto hágalo con el mensaje "Ingrese nuevo o antiguo (nuevo-antiguo)\n".
+
+NOTA3: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.
+
+</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+genero=input("Ingrese un genero: \n")
+a=input("Ingrese nuevo o antiguo (nuevo-antiguo)\n")
+
+if genero=="rock":
+  if a=="antiguo":
+    print("Angie")
+  elif a=="nuevo":
+    print("Believer")
+elif genero=="reggaeton":
+  if a=="antiguo":
+    print("Martes de galeria")
+  elif a=="nuevo":
+    print("Ambiente")
+elif genero=="metal":
+  if a=="antiguo":
+    print("One")
+  elif a=="nuevo":
+    print("Edge of the blade")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero, y verifique si este es par. Si el número es par, imprima su CUADRADO. Si el número es impar, verifique si es divisible por 5, y en caso tal imprima el DOBLE del número.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n = int(input("Ingrese un entero: \n"))
+if n%2==0:
+    cua = pow(n,2)
+    print(cua)
+else:
+    if n%5==0:
+        doble=2*n
+    print(doble)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escribe un programa en Python 3 que solicite por consola un número entero positivo n e imprima la suma de los primeros n enteros positivos.
+
+NOTA: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" despues de "entero".</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n=int(input("Ingrese un numero entero \n"))
+a=(n*(n+1))/2
+print(int(a))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros, N y M respectivamente. Luego utilice el número ingresado en el siguiente ejercicio:
+
+María Isabel Urrutia recorre 300 km entrenando 20 días a razón de 4 horas diarias. Calcule e imprima cuantos kilómetros recorrerá María Isabel Urrutia si en los próximos N días solo dispone de M horas diarias para entrenar.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a una cifra decimal. Utilice la función round().</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = int(input("Ingrese un numero entero \n"))
+M = int(input("Ingrese un numero entero \n"))
+distancia = (300*N*M)/(20*4)
+print(round(distancia,1))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos textos, estos corresponden a un genero de películas y el segundo a si es nuevo o antiguo. Si el primer texto es "ficcion", y el segundo es "antiguo" imprima "Star Wars". Si el primer texto es "drama" y el segundo es "antiguo", imprima "titanic". Si el primer texto es "ficcion" y el segundo "nuevo" imprima "Ready Player One". Si el primer texto es "drama" y el segundo es "nuevo" imprima "La Chica Danesa"
+
+NOTA: Para solicitar el primer texto, hágalo con el mensaje "Ingrese un genero: \n".
+
+NOTA2: Para solicitar el segundo texto hágalo con el mensaje "Ingrese nuevo o antiguo (nuevo-antiguo)\n".
+
+NOTA3: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+a=input("Ingrese un genero: \n")
+b=input("Ingrese nuevo o antiguo (nuevo-antiguo)\n")
+if a=="ficcion" and b=="antiguo":
+    print("Star Wars")
+elif a=="drama" and b=="antiguo":
+    print("titanic")
+elif a=="ficcion" and b=="nuevo":
+    print("Ready Player One")
+elif a=="drama" and b=="nuevo":
+    print("La Chica Danesa")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
             <span></span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
         </div>
         <div class="codigo">
             <pre>
