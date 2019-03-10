@@ -1923,21 +1923,58 @@ elif a=="drama" and b=="nuevo":
             </pre>
         </div>
         <div class="card-panel">
-            <span></span>
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros que corresponden a A y B siendo A el primer número y B el segundo. Si A es mayor que B, calcule e imprima el cociente entre A y B (sin cifras decimales). Si A es menor que B, calcule e imprima el producto entre ambos y si dicho producto es mayor a 100 imprima "Mayor que 100" si no lo es, no imprima. Si son iguales calcule e imprima la suma entre ambos.
+
+NOTA: Para solicitar los dos números enteros, hágalo con el mensaje "Ingrese un numero entero: \n".
+
+NOTA2: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.
+
+</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+import math
+a=int(input("Ingrese un numero entero: \n"))
+b=int(input("Ingrese un numero entero: \n"))
+if a>b:
+    print(math.floor(a/b))
+elif a<b:
+    p=b*a
+    print(p)
+    if p>100:
+        print("Mayor que 100")
+else:
+    print(a+b)</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros N y M, luego utilice los números ingresados en el siguiente ejercicio:
+
+
+
+Un vendedor de camisas quiere saber cuánto dinero obtendrá si vende N camisas a un precio de M pesos por unidad. El vendedor tiene una regla, si el dinero obtenido corresponde a un número par, dona a una fundación un total de $50 por cada camisa vendida. Si el dinero obtenido corresponde a un número impar, dona a una fundación un total de $25 por cada camisa vendida. Muestre por pantalla con cuánto dinero queda en total el vendedor en cada caso.
+
+
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Note que las salidas deben ser números enteros.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+N=int(input("Ingrese un numero entero \n"))
+M=int(input("Ingrese un numero entero \n"))
+a=N*M
+if a%2==0:
+  b=50*N
+  print(a-b)
+elif a%2!=0:
+  c=25*N
+  print(a-c)</code>
             </pre>
         </div>
         <div class="card-panel">
