@@ -1368,7 +1368,340 @@ else:
         
         
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola un número entero, este corresponde a la edad de una persona. Si el número está entre 0 y 17, imprima el mensaje "Es menor de edad". Si el número solicitado es mayor o igual a 18, solicite por consola un texto. Si el texto es "s" imprima "Puede entrar", de lo contrario imprima "No puede entrar".
+
+NOTA: Para solicitar el número entero hágalo con el mensaje "Ingrese una edad: \n".
+
+NOTA2: Para solicitar el texto hágalo con el mensaje "Tiene cedula (s-n)\n".
+
+NOTA3: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúscula inicial.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n=int(input("Ingrese una edad: \n"))
+if(n>0 and n<=17):
+    print("Es menor de edad")
+elif n>=18:
+    t=input("Tiene cedula (s-n)\n")
+    if (t=="s"):
+        print("Puede entrar")
+    else:
+        print("No puede entrar")</code>
+            </pre>
+        </div>
+        
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números, N y M respectivamente. Luego utilice el número ingresado en el siguiente ejercicio:
+
+Calcule e imprima la cantidad de cerca eléctrica necesaria para delimitar un terreno que tiene N metros de largo y M metros de ancho.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "numero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a una cifra decimal. Utilice la función round().</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = float(input("Ingrese un numero \n"))
+M = float(input("Ingrese un numero \n"))
+peri = (2*N)+(2*M)
+print(round(peri,1))</code>
+            </pre>
+        </div>
+        
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola cuatro números reales correspondientes a la longitud de los cuatro lados de un trapecio rectángulo, luego calcule y muestre el perímetro de este.
+
+NOTA: El mensaje al solicitar la entrada debe ser: "Ingrese un numero real \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "real".</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n1 = float(input("Ingrese un numero real \n"))
+n2 = float(input("Ingrese un numero real \n"))
+n3 = float(input("Ingrese un numero real \n"))
+n4 = float(input("Ingrese un numero real \n"))
+print(n1+n2+n3+n4)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero correspodiente a la temperatura actual en grados celcius. Si la temperatura es mayor que 27, imprima "Hace calor". Si la temperatura está entre 20 y 26, solicite por consola un texto. Si el texto es "sol", imprima "Usar ropa fresca". Si el texto es "nubes", imprima "Puede llover". Si la temperatura es menor que 20 grados imprima "Que frio"
+
+NOTA: Para solicitar el número entero hágalo con el mensaje "Ingrese una temperatura: \n".
+
+NOTA2: Para solicitar el texto, hágalo con el mensaje "Ingrese el clima actual: \n"
+
+NOTA3: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+temperatura=int(input("Ingrese una temperatura: \n"))
+
+if temperatura>27:
+    print("Hace calor")
+    
+elif (temperatura>20 and temperatura<26):
+    clima=input("Ingrese el clima actual: \n")
+    if clima=="sol":
+      print("Usar ropa fresca")
+    
+    elif clima=="nubes":
+      print("Puede llover")
+    
+else:
+    print("Que frio")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero, si el numero es impar imprima "Raro", si el número es par y se encuentra entre 10 y 20, imprima "Nada raro", si el número es par y está entre 21 y 30 imprima "Raro", si el número es mayor que 30 imprima "Nada raro".
+
+NOTA: Para solicitar el número entero hágalo con el mensaje "Ingrese un entero: \n".
+
+NOTA2: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+numero = int(input("Ingrese un entero: \n"))
+if (numero%2)!=0:
+  print("Raro")
+elif (numero%2)==0 and (10<numero<20):
+  print("Nada raro")
+elif (numero%2)==0 and (21<numero<30):
+  print("Raro")
+elif(numero>30):
+  print("Nada raro")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros, N y M respectivamente. Luego utilice el número ingresado en el siguiente ejercicio:
+
+En la fábrica Billares Super Star, 20 personas hacen 130 mesas de billar en 15 días. Calcule e imprima cuantas mesas de billar harán N personas en M días.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a una cifra decimal. Utilice la función round().</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = int(input("Ingrese un entero: \n"))
+M = int(input("Ingrese un entero: \n"))
+mesas = (130*N*M)/(20*15)
+print(round(mesas,1))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en Python 3 que solicite por consola dos listas e imprima una lista que contiene solo los elementos que son comunes entre las listas (sin duplicados). Asegúrese de que su programa funcione con dos listas de diferentes tamaños.
+
+NOTA: El mensaje al solicitar la entrada debe ser: "Ingrese una lista \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" despues de "lista". El mensaje debe ser el mismo para solicitar las dos listas.
+
+NOTA1: La nueva lista debe tener sus elementos ordenados de menor a mayor</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+def listas(a, b):
+    lista_final = []
+    for i in a:
+        if (i not in lista_final) and (i in b):
+            lista_final.append(i)
+    return lista_final
+lista1 = eval(input("Ingrese una lista \n"))
+lista2 = eval(input("Ingrese una lista \n"))
+comunes = listas(lista1,lista2)
+print(comunes)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Se dice comúnmente que un año humano es equivalente a 7 años perrunos, sin embargo esta conversión falla al no reconocer que los perros alcanzan la edad adulta a los 2 años humanos. Como resultado algunas personas creen que es mejor contar los primeros dos años humanos como 10.5 años perrunos, y luego contar cada año adicional como 4 años perrunos.
+
+Escriba un programa en python 3 que solicite por consola un número entero, que corresponde a la cantidad de años humanos, y haga la conversión a años perrunos. Asegúrese que su programa funcione correctamente cuando la cantidad de años sea menor que 2 y cuando sea mayor. Su programa debe imprimir "Error" si se ingresa un número negativo. Imprima el resultado redondeado a una cifra decimal.
+
+NOTA: Para solicitar los números enteros hágalo con el mensaje "Ingrese un numero entero: \n".
+
+NOTA2: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.
+
+NOTA3: El enfoque que se va a utilizar para calcular la cantidad de años perrunos es el de: 10.5 años perrunos por cada año humano en los primeros 2 años, y 4 años perrunos por cada año humano para el resto.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+humanos = int(input("Ingrese un numero entero: \n"))
+if humanos>0 and humanos<=2:
+    años = humanos*10.5
+    print(round(años,1))
+elif humanos>2:
+    añosp = 13.0+(humanos*4)
+    print(round(añosp,1))
+else:
+    print("Error")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola cuatro números reales correspondientes a la longitud de los cuatro lados de un trapecio rectángulo, luego calcule y muestre el perímetro de este.
+
+NOTA: El mensaje al solicitar la entrada debe ser: "Ingrese un numero real \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "real".</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n1 = float(input("Ingrese un numero real \n"))
+n2 = float(input("Ingrese un numero real \n"))
+n3 = float(input("Ingrese un numero real \n"))
+n4 = float(input("Ingrese un numero real \n"))
+print(n1+n2+n3+n4)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Realizar un programa en Python 3 que solicite un texto por consola y con él realizar un juego de piedra, papel o tijera en el que el programa siempre le gane al usuario.
+
+Entrada:
+
+El usuario va a entrar una cadena de texto 'piedra', 'papel' o 'tijera' la cuál puede tener letras en mayúscula y minúscula, es decir "PiEdrA", "TijerA" e incluso tener espacios adicionales: "PAPEL   "
+
+Salida:
+
+El programa deberá imprimir el caso de piedra papel o tijera que le gane al usuario en minúscula y sin espacios adicionales</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+jugador = input()
+x = jugador.lower()
+y = x.replace(' ', '')
+if y=="piedra":
+  print("papel")
+elif y=="papel":
+  print("tijera")
+else:
+  print("piedra")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola tres números enteros correspodientes a la longitud de 3 segmentos de recta. Verifique que con el tamaño de esos 3 segmentos se puede formar un triángulo. Si se puede formar, imprima el perímetro, si el perímetro es mayor que 20 imprima "Es mayor", sino imprima "Es menor", si no se puede formar un triángulo imprima "No se puede"
+
+NOTA: Para solicitar los números enteros hágalo con el mensaje "Ingrese un segmento: \n".
+
+NOTA3: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n1 = int(input("Ingrese un segmento: \n"))
+n2 = int(input("Ingrese un segmento: \n"))
+n3 = int(input("Ingrese un segmento: \n"))
+if n1<(n2+n3) and n2<(n3+n1) and n3<(n1+n2):
+    perimetro = n1+n2+n3
+    print(perimetro)
+    if perimetro>20:
+        print("Es mayor")
+    else:
+        print("Es menor")
+else:
+    print("No se puede")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola tres números enteros correspodientes a la longitud de 3 segmentos de recta. Verifique que con el tamaño de esos 3 segmentos se puede formar un triángulo. Si se puede formar, imprima el perímetro, si el perímetro es mayor que 20 imprima "Es mayor", sino imprima "Es menor", si no se puede formar un triángulo imprima "No se puede"
+
+NOTA: Para solicitar los números enteros hágalo con el mensaje "Ingrese un segmento: \n".
+
+NOTA3: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+a = int(input("Ingrese un segmento: \n"))
+b = int(input("Ingrese un segmento: \n"))
+c = int(input("Ingrese un segmento: \n"))
+if (a+b)>c and (a+c)>b and (b+c)>a:
+    perimetro = a+b+c
+    print(perimetro)        
+    if perimetro>20:
+        print("Es mayor")
+    else:
+        print("Es menor")
+else:
+    print("No se puede")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola cuatro números enteros correspondientes a los lados de un rectangulo. Verifique que con el tamaño de esos 4 lados se puede formar un cuadrado. Si se puede formar, imprima el área, si el área es mayor que 100 imprima "Es mayor", sino imprima "Es menor". Si no se forma un cuadrado, imprima "No es cuadrado"
+
+NOTA: Para solicitar los números enteros hágalo con el mensaje "Ingrese un lado: \n".
+
+NOTA3: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n1=int(input("Ingrese un lado: \n"))
+n2=int(input("Ingrese un lado: \n"))
+n3=int(input("Ingrese un lado: \n"))
+n4=int(input("Ingrese un lado: \n"))
+if n1==n2==n3==n4:
+  area=n1*n2
+  print(area)
+  if area>100:
+    print("Es mayor")
+  else:
+    print("Es menor")
+else:
+  print("No es cuadrado")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un texto, que corresponde a una contraseña, y verifique que el texto es una contraseña válida. Si la contraseña es válida imprima "Segura", de no serlo imprima "Insegura".
+
+Para que una contraseña sea válida deberá tener, al menos 8 caracteres, entre los cuales deberá haber letras y números y debe tener un caracter especial que puede ser "#", "@" o "!" (Ningún otro adicional).
+
+NOTA: Para solicitar el texto hágalo con el mensaje "Ingrese una contrasena: \n". (Note que no es una ñ, sino una n).
+
+NOTA2: Los mensajes se deben imprimir tal como aparecen entre comillas, sin tildes ni comas y con mayúsculas en sus respectivas apariciones.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+c=str(input("Ingrese una contrasena: \n"))
+if len(c)>=8:
+  if c.find("#")!=-1:
+    y=c.replace("#","x")
+    if y.isalpha()==False:
+      print("Segura")
+    
+    else:
+      print("Insegura")
+  elif c.find("@")!=-1:
+    y=c.replace("@","x")
+    if y.isalpha()==False:
+      print("Segura")
+    
+    else:
+      print("Insegura")
+  elif c.find("!")!=-1:
+    y=c.replace("!","x")
+    if y.isalpha()==False:
+      print("Segura")
+    
+    else:
+      print("Insegura")
+  else:
+    print("Insegura")
+else:
+  print("Insegura")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span></span>
         </div>
         <div class="codigo">
             <pre>
@@ -1376,8 +1709,6 @@ else:
 -----------codigo--------</code>
             </pre>
         </div>
-        
-        
         <div class="card-panel">
             <span>------------enunciado---------------</span>
         </div>
@@ -1387,19 +1718,6 @@ else:
 -----------codigo--------</code>
             </pre>
         </div>
-        
-        
-        <div class="card-panel">
-            <span>------------enunciado---------------</span>
-        </div>
-        <div class="codigo">
-            <pre>
-                <code>
------------codigo--------</code>
-            </pre>
-        </div>
-
-
 
     </body>
 
