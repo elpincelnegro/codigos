@@ -1996,6 +1996,385 @@ print(volumen)</code>
             </pre>
         </div>
         <div class="card-panel">
+            <span>Escriba un programa de Python 3 que solicite por consola una lista con números reales y un número entero. En caso de que el número ingresado sea mayor a TODOS los elementos de la lista imprima "Mayor", por el contrario, en caso de que el número ingresado sea menor a TODOS los elementos de la lista imprima la suma de todos los elementos de la lista y el número. Si no se cumplen los casos anteriores imprima "No cumple".
+
+NOTA: El mensaje al solicitar la primera entrada debe ser: "Ingrese una lista \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "lista ". El mensaje para solicitar la segunda entrada debe ser: "Ingrese un numero entero \n" con las mismas normas dadas para la primera entrada.
+
+</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+l=eval(input("Ingrese una lista \n"))
+n=int(input("Ingrese un numero entero \n"))
+may=max(l)
+men=min(l)
+if n>may:
+  print("Mayor")
+elif n<men:
+  print((sum(l))+n)
+else:
+  print("No cumple")
+</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego calcule los primeros N números múltiplos de 5 e imprímalos en una lista.
+
+NOTA: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "real".
+
+</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n=int(input("Ingrese un numero entero \n"))
+l=[]
+for i in range(0,n):
+  i = i*5
+  l.append(i)
+print(l)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+En caso de que el número N tenga 5 dígitos, imprimir la suma de todos sus dígitos. Ademas, en caso de que la suma sea mayor a 10, imprimir en otra línea la palabra “Alerta”. Por otro lado, si el numero N no tiene 5 dígitos imprima "Error".
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente la salida indicada, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Asegúrese de imprimir las salidas como lo indica los ejemplos. Tenga en cuenta las mayúsculas, minúsculas y espacios que se indican para el texto de salida. </span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n=int(input())
+n=str(n)
+if len(n)==5:
+  suma=0
+  for i in n:
+    suma+=int(i)
+  print(suma)
+  if suma>10:
+    print("Alerta")
+else:
+  print("Error") </code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Marcela tenía N cartas de Yu-Gi-Oh!. 15 de las cartas que tenía se las regaló a su amigo Marcos en su cumpleaños. Además, le regaló 20 cartas a Carlos, el hermano de Marcos. Más tarde, Marcela encontró dos paquetes nuevos de cartas de Yu-Gi-Oh! en su cuarto, cada paquete tenía 6 cartas regulares y una carta de edición limitada. Imprima la cantidad de cartas de Yu-Gi-Oh! con las que termina Marcela.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+a=int(input("Ingrese un numero entero \n"))
+b=(a-35)+14
+print(b)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola una lista N y una lista M, ambas númericas de 3 elementos, luego utilice las listas ingresadas en el siguiente ejercicio:
+
+Calcule la sumatoria de los elementos de la lista N y calcule la sumatoria de los elementos de la lista M. Si la sumatoria de N es mayor que la de M, verifique si la suma de N es por lo menos 50. Si la suma de N es por lo menos 50, añada 50 al final de la lista N e imprimala por pantalla. En caso de que la suma sea menor a 50, añada 0 al final de la lista N e imprimala por pantalla. En caso de que la sumatoria de M sea mayor, agregue al final de M la sumatoria de N e imprima M por pantalla. Si las sumatorias de N y M son iguales, imprima por pantalla "Iguales"
+
+NOTA1: El mensaje al solicitar la entradas debe ser: "Ingrese una lista \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n=eval(input("Ingrese una lista \n"))
+m=eval(input("Ingrese una lista \n"))
+sumn= n[0]+n[1]+n[2]
+summ= m[0]+m[1]+m[2]
+if(sumn>summ):
+  if(sumn>=50):
+    n.append(50)
+    print(n)
+  elif(sumn<50):
+    n.append(0)
+    print(n)
+if(summ>sumn):
+  m.append(sumn)
+  print(m)
+else:
+  print("Iguales")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros, N y M respectivamente. Luego utilice el número ingresado en el siguiente ejercicio:
+
+5 autobuses de la empresa E-Bolivariano transportan 800 pasajeros en 4 viajes. Calcule e imprima la cantidad de viajes necesarios para transportar N pasajeros usando M autobuses de la empresa E-Bolivariano.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a una cifra decimal. Utilice la función round().</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n=int(input("Ingrese un numero entero \n"))
+m=int(input("Ingrese un numero entero \n"))
+x=(n)/(40*m)
+print(round(x,1))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Antonella y Gregorio compraron una nevera que cuesta N pesos. Cuando se la entregaron, pagaron 2/5 del precio al contado y abonarán el resto en 5 cuotas iguales, sin recargo. Calcule e imprima la cantidad de dinero que pagarán en cada cuota.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+n=int(input( "Ingrese un numero entero \n"))
+p1=(2.0/5.0)*n
+total=n-p1
+cuota=total/5.0
+print(int(cuota))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola tres números enteros N, M y L, luego utilice los números ingresados en el siguiente ejercicio:
+
+Si la suma de N y M es un múltiplo de L, el programa debe imprimir el cuadrado de la suma de N y M. En caso contrario, imprima la suma de los cuadrados de los tres números.
+
+
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Note que las salidas deben ser números enteros.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N=int(input("Ingrese un numero entero \n")) 
+M=int(input("Ingrese un numero entero \n")) 
+L=int(input("Ingrese un numero entero \n"))
+suma = N + M
+if suma%L==0:
+    print(pow(suma,2))
+else: 
+    sumar = pow(N,2)+pow(M,2)+pow(L,2)
+    print(sumar)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros, N y M respectivamente. Luego utilice el número ingresado en el siguiente ejercicio:
+
+En el banco de México, Pepito invirtió 7000 pesos durante 5 meses y gano 1200 pesos. Calcule e imprima la cantidad de dinero en pesos que invirtió un segundo socio (en el mismo banco de México) donde ganó N pesos si los invirtió durante M meses.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a una cifra decimal. Utilice la función round</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N=int(input("Ingrese un numero entero \n")) 
+M=int(input("Ingrese un numero entero \n")) 
+op = ((7000*5*N)/(1200*M))
+print(round(op,1))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros N y M, luego utilicelos en el siguiente ejercicio:
+
+El numero N representa la cantidad de alumnos de un colegio que van para un paseo a Comfama. El número M representa el valor de la entrada al parque por cada alumno. El colegio cuenta con un presupuesto de 700000 para el paseo, averigue si con dicho dinero se puede hacer el paseo.En caso de que se pueda, averigue la cantidad de dinero que sobra. Si la cantidad de dinero que sobra es por lo menos 100000, imprima dicha cantidad sobrante por pantalla. Si la cantidad sobrante es menor que 100000, imprima por pantalla la mitad de la cantidad, redondeada a una cifra decimal. Si con el dinero no se puede realizar el paseo, imprima por pantalla la cantidad de niños que no podrian asistir al paseo (Tenga en cuenta que no es posible dejar medio niño).
+
+NOTA1: El mensaje al solicitar la entradas debe ser: "Ingrese un numero entero \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Note que las salidas deben ser números enteros.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+import math as m
+n=int(input("Ingrese un numero entero \n"))
+m=int(input("Ingrese un numero entero \n"))
+a=n*m
+if a<=700000:
+  b=700000-a
+  if b>=100000:
+    print(b)
+  else:
+    c=round((b/2),1)
+    print(c)
+else:
+  d=700000%m
+  e=(a-700000)+d
+  
+  print(e//m)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Marcela tenía N cartas de Yu-Gi-Oh!. 15 de las cartas que tenía se las regaló a su amigo Marcos en su cumpleaños. Además, le regaló 20 cartas a Carlos, el hermano de Marcos. Más tarde, Marcela encontró dos paquetes nuevos de cartas de Yu-Gi-Oh! en su cuarto, cada paquete tenía 6 cartas regulares y una carta de edición limitada. Imprima la cantidad de cartas de Yu-Gi-Oh! con las que termina Marcela.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+a=int(input("Ingrese un numero entero \n"))
+b=(a-35)+14
+print(b)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N y un texto M, luego utilice el número y el texto ingresado en el siguiente ejercicio: N corresponde al precio base de un computador y M al nombre de un día de la semana. Si el día de la semana es "lunes","miercoles" o "viernes", el computador tendra un descuento del 20%. Si el día es "jueves" el computador aumentara un 10% su valor. En caso contrario, el computador mantendrá su precio. Imprima por pantalla el precio del computador según el caso, aproximado a dos cifras decimales.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", "Ingrese un texto \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Utilice la función round() para redondear.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N=int(input("Ingrese un numero entero \n")) 
+M=str(input("Ingrese un texto \n"))
+if M=="lunes" or M=="miercoles" or M=="viernes":
+    print(N*0.8)
+elif M=="jueves":
+    print(N*1.1)
+else:
+    print(N)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números, N y M respectivamente. Luego utilice el número ingresado en el siguiente ejercicio:
+
+Calcule e imprima el área de un rectángulo que tiene como perímetro N metros y el ancho de uno de sus lados es M metros.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "numero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a una cifra decimal. Utilice la función round().</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = float(input("Ingrese un numero \n"))
+M = float(input("Ingrese un numero \n"))
+base = M
+altura = (N-(2*M))/2
+area = base*altura
+print(round(area,1))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>------------enunciado---------------</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+-----------codigo--------</code>
+            </pre>
+        </div>
+        <div class="card-panel">
             <span>------------enunciado---------------</span>
         </div>
         <div class="codigo">
