@@ -2821,6 +2821,127 @@ else:
     print(M-N)</code>
             </pre>
         </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número, N. Luego utilice el número ingresado en el siguiente ejercicio:
+
+Los tres hermanos Goyenechea se reparten N euros. El mayor recibe el doble que el mediano y este el cuádruple que el pequeño. Calcule e imprima cuanto recibe el hermano mayor aproximado a DOS cifras decimales.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a dos cifras decimales. Utilice la función round().</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = float(input("Ingrese un numero \n"))
+print(round((8*N)/13,2))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números, N y M respectivamente. Luego utilice el número ingresado en el siguiente ejercicio:
+
+La pirámide de Keops es una de las pirámides cuadrangulares más famosas. Tiene por base un cuadrado de lado N metros y una altura de M metros. Calcule e imprima el volumen que ocupa dicha pirámide.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "numero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a una cifra decimal. Utilice la función round().</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = float(input("Ingrese un numero \n"))
+M = float(input("Ingrese un numero \n"))
+print(round((N**2)*(M)/3,1))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Imprima "Igual" en caso de que el número N ingresado (de tres cifras) sea igual al revés del mismo número. En caso contrario, imprima "Diferente".
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen. Tenga en cuenta las mayúsculas y minúsculas que se indican para el texto de salida.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = int(input("Ingrese un numero entero \n"))
+F = str(N)
+R = F[2]+F[1]+F[0]
+if F==R:
+    print("Igual")
+else:
+    print("Diferente")</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero, N. Luego utilice el número ingresado en el siguiente ejercicio:
+
+En un concierto hay N personas. Si sabemos que hay 48 mujeres más que hombres. Calcule e imprima cuantas mujeres hay en el concierto.
+
+**Importe la librería math para usar la función floor(x), que permite obtener el piso de un número (El entero más cercano hacia abajo). Ejemplo: math.floor(14.3) = 14.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+import math
+N = int(input("Ingrese un numero entero \n"))
+print(math.floor((N-48)/2+48))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Martin quiere preparar el terreno de su finca para sembrar tomates. La finca Salamanca tiene una superficie de 7.140 metros cuadrados. Para abonar el terreno se emplean 3 máquinas funcionando durante 5 horas. Calcule e imprima la cantidad de horas que se requieren para abonar el terreno de una finca cuya superficie sea la mitad si se emplean N máquinas.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a una cifra decimal. Utilice la función round().</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = int(input("Ingrese un numero entero \n"))
+print(round((3570*15)/(N*7140),1))</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola una lista N, luego utilice la listas ingresada en el siguiente ejercicio:
+
+Cuente la cantidad de elementos de la lista. Si esta cantidad es par, elevela al cubo.Si el cubo de la cantidad es multiplo de 3, entonces añada el cubo de la cantidad al final de la lista e imprimala por pantalla. Si el cubo de la cantidad no es multiplo de 3, imprima la lista por pantalla. En caso de que la cantidad de elementos no sea par, añada "No es par" al final de la lista e imprimala por pantalla
+
+NOTA1: El mensaje al solicitar la entradas debe ser: "Ingrese una lista \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N=eval(input("Ingrese una lista \n"))
+c = len(N)
+if c%2==0:
+    c = c**3
+    if c%3==0:
+        N = N+[c]
+        print(N)
+    else:
+        print(N)
+else:
+    N = N+["No es par"]
+    print(N)</code>
+            </pre>
+        </div>
     </body>
 
 </html>
