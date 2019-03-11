@@ -2294,111 +2294,285 @@ print(round(area,1))</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola un texo  N, luego utilice el texto ingresado en el siguiente ejercicio:
+Usualmente, la palabra N tiene más de dos letras "a". Se desea saber si dicho número de "a" que contiene la palabra es por lo menos 2,igual a 2 o menor que 2. Si el numero de "a" en la palabra es mayor que dos, imprima "Mayor". Si es exactamente 2, imprima "Dos". Si es menor que 2, imprima "Menor".
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un texto \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+t = input("Ingrese un texto \n")
+a = t.count("a")
+if a>2:
+  print("Mayor")
+elif a==2:
+  print("Dos")
+else:
+  print("Menor")</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola una lista N y una lista M, ambas númericas de 3 elementos, luego utilice las listas ingresadas en el siguiente ejercicio:
+
+Calcule la sumatoria de los elementos de la lista N y calcule la sumatoria de los elementos de la lista M. Si la sumatoria de N es mayor que la de M, verifique si la suma de N es por lo menos 50. Si la suma de N es por lo menos 50, añada 50 al final de la lista N e imprimala por pantalla. En caso de que la suma sea menor a 50, añada 0 al final de la lista N e imprimala por pantalla. En caso de que la sumatoria de M sea mayor, agregue al final de M la sumatoria de N e imprima M por pantalla. Si las sumatorias de N y M son iguales, imprima por pantalla "Iguales"
+
+NOTA1: El mensaje al solicitar la entradas debe ser: "Ingrese una lista \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+lista1 = eval(input("Ingrese una lista \n"))
+lista2 = eval(input("Ingrese una lista \n"))
+suma1 = sum(lista1)
+suma2 = sum(lista2)
+if suma1>suma2:
+    if suma1>=50:
+        lista1.append(50)
+        print(lista1)
+    else:
+        lista1.append(0)
+        print(lista1)
+elif suma2>suma1:
+    lista2.append(suma1)
+    print(lista2)
+else:
+    print("Iguales")</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span> Escriba un programa en python 3 que solicite por consola un número, N. Luego utilice el número ingresado en el siguiente ejercicio:
+
+Los tres hermanos Goyenechea se reparten N euros. El mayor recibe el doble que el mediano y este el cuádruple que el pequeño. Calcule e imprima cuanto recibe el hermano del medio aproximado a DOS cifras decimales.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+NOTA3: Redondear la respuesta a dos cifras decimales. Utilice la función round().</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+n = float(input("Ingrese un numero \n"))
+print(round(n/13*4,2))</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N y un mes M, luego utilice los datos ingresados en el siguiente ejercicio:
+
+La siguiente tabla indica el signo del zodiaco de acuerdo al mes y al día de nacimiento.
+
+
+Imprima el signo del zodiaco de una persona que nació el día N y el mes M. 
+
+NOTA1: El mensaje al solicitar el numero debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El mensaje al solicitar el mes debe ser: "Ingrese un mes \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "mes".
+
+NOTA3: El programa debe mostrar como resultado exclusivamente la salida indicada, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA4: Asegúrese de imprimir las salidas EXACTAMENTE como lo indica la primera columna de la tabla. Tenga en cuenta las mayúsculas y minúsculas que se indican para el texto de salida. No utilice tildes. </span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+N = int(input("Ingrese un numero entero \n"))
+M = input("Ingrese un mes \n")
+if (M=="marzo" and N>=21) or (M=="abril" and N<=20):
+  print("Aries")
+elif (M=="abril" and N>=21) or (M=="mayo" and N<=20):
+  print("Tauro")
+elif (M=="mayo" and N>=21) or (M=="junio" and N<=21):
+  print("Geminis")
+elif (M=="junio" and N>=22) or (M=="julio" and N<=22):
+  print("Cancer")
+elif (M=="julio" and N>=23) or (M=="agosto" and N<=23):
+  print("Leo")
+elif (M=="agosto" and N>=24) or (M=="septiembre" and N<=23):
+  print("Virgo")
+elif (M=="septiembre" and N>=24) or (M=="octubre" and N<=23):
+  print("Libra")
+elif (M=="octubre" and N>=23) or (M=="noviembre" and N<=22):
+  print("Escorpio")
+elif (M=="noviembre" and N>=23) or (M=="diciembre" and N<=21):
+  print("Sagitario")
+elif (M=="diciembre" and N>=22) or (M=="enero" and N<=19):
+  print("Capricornio")
+elif (M=="enero" and N>=20) or (M=="febrero" and N<=19):
+  print("Acuario")
+elif (M=="febrero" and N>=20) or (M=="marzo" and N<=20):
+  print("Piscis")</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego calcule los primeros N números múltiplos de 5 e imprímalos en una lista.
+
+NOTA: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "real".</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+N = int(input("Ingrese un numero entero \n"))
+lista = []
+for i in range(N):
+    lista.append(5*i)
+print(lista)</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros N y M, luego utilice los números ingresados en el siguiente ejercicio:
+
+En la chocolatería “Me Late” venden N trufas blancas y M trufas negras. Imprima el color de la trufa que vendieron más, ya sea “Blanca” o “Negra” según sea el caso. En caso de que vendan el mismo número de trufas blancas y negras, imprima "Igual".
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen. Tenga en cuenta las mayúsculas y minúsculas que se indican para el texto de salida.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+N = int(input("Ingrese un numero entero \n"))
+M = int(input("Ingrese un numero entero \n"))
+if M>N:
+    print("Negra")
+elif N>M:
+    print("Blanca")
+else:
+    print("Igual")    
+</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Marcela tenía N cartas de Yu-Gi-Oh!. 15 de las cartas que tenía se las regaló a su amigo Marcos en su cumpleaños. Además, le regaló 20 cartas a Carlos, el hermano de Marcos. Más tarde, Marcela encontró dos paquetes nuevos de cartas de Yu-Gi-Oh! en su cuarto, cada paquete tenía 6 cartas regulares y una carta de edición limitada. Imprima la cantidad de cartas de Yu-Gi-Oh! con las que termina Marcela.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+n = int(input("Ingrese un numero entero \n"))
+print(n-21)</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola dos números, N y M respectivamente. Luego utilice el número ingresado en el siguiente ejercicio:
+
+Calcule e imprima el área de un rectángulo que tiene como perímetro N metros y el ancho de uno de sus lados es M metros.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "numero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a una cifra decimal. Utilice la función round().</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+N = float(input("Ingrese un numero \n"))
+M = float(input("Ingrese un numero \n"))
+a = (N-2*M)/2
+print(round(a*M,1))</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span> Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Oscar ha comprado 2 colecciones de libros por N pesos en total. La primera colección consta de 15 libros y cada uno Ie ha costado 35.000 pesos. La segunda colección consta de 12 libros. Calcule e imprima el valor en pesos que cuesta cada libro de la segunda colección aproximado a DOS cifras decimales.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+NOTA3: Redondear la respuesta a dos cifras decimales. Utilice la función round().</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+N = int(input("Ingrese un numero entero \n"))
+print(round((N-525000)/12,2))    </code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola un número, N. Luego utilice el número ingresado en el siguiente ejercicio:
+
+Sabiendo que un pantalón es 5 € más caro que una camisa y que si compro 6 pantalones y 4 camisas pago N €. Calcule e imprima el precio de una camisa aproximado a DOS cifras decimales.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a dos cifras decimales. Utilice la función round().</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+N = float(input("Ingrese un numero  \n"))
+a = ((N+20)/10)-(5)
+print(round(a,2))</code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+En el vivero tierra negra ofrecen el kilo de tierra con descuento según lo indica la siguiente tabla:
+
+
+Suponiendo que el kilo de tierra tiene un valor de $15000, determine e imprima cuanto pagara una persona que compre N kg de tierra en este vivero.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Asegúrese de imprimir los números como lo indica los ejemplos. Note que los números que se imprimen son enteros.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+N = int(input("Ingrese un numero entero \n"))
+a = N*15000
+if N<=5:
+    print(a)
+elif N>5 and N<=8:
+    a-=a*0.1
+    print(int(a))
+elif N>8 and N<=19:
+    a-=a*0.2
+    print(int(a))
+elif N>19:
+    a-=a*0.3
+    print(int(a)) </code>
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros N y M, luego utilicelos en el siguiente ejercicio:
+
+El numero N representa la cantidad de kilos de cemento que necesita un constructor para hacer una casa. El número M representa el valor de cada kilo de cemento. Se cuenta con un presupuesto de 600000 para la construcción, averigue si con dicho dinero se puede construir la casa.En caso de que se pueda, averigue la cantidad de dinero que sobra. Si la cantidad de dinero que sobra es por lo menos 100000, imprima dicha cantidad sobrante por pantalla. Si la cantidad sobrante es menor que 100000, imprima por pantalla la mitad de la cantidad, redondeada a una cifra decimal. Si con el dinero no se puede construir la casa, imprima por pantalla la suma de M+N.
+
+NOTA1: El mensaje al solicitar la entradas debe ser: "Ingrese un numero entero \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Note que las salidas deben ser números enteros.</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+N = int(input("Ingrese un numero entero \n"))
+M = int(input("Ingrese un numero entero \n"))
+a = N*M
+if a<=600000:
+    s = (600000-a)
+    if s>=100000:
+        print(s)
+    else:
+        print(round(s/2,1))
+else:
+    print(N+M)   </code>
             </pre>
         </div>
 
