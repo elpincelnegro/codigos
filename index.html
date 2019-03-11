@@ -2942,6 +2942,35 @@ else:
     print(N)</code>
             </pre>
         </div>
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros N y M, luego utilice los números ingresados en el siguiente ejercicio:
+
+N representa el precio de la libra de café Colombiano, M representa el precio de la libra de café importado. Un comprador tiene $700000 pesos para comprar café. El comprador solo comprará café Colombiano si la cantidad de libras que puede comprar con el dinero supera por lo menos en 10 unidades la cantidad de libras que puede comprar del importado. En caso contrario comprará café importado. Imprima por pantalla la cantidad de libras que va a comprar, según sea el caso.(Tenga en cuenta que solo se pueden comprar cantidades enteras de libras).
+
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+
+NOTA3: Importar la libreria math para usar la función piso, retorna el valor entero más cercano hacia abajo. ejemplo math.floor(3.3) es igual a 3.
+
+NOTA4: Note que las salidas deben ser números enteros.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = int(input("Ingrese un numero entero \n"))
+M = int(input("Ingrese un numero entero \n"))
+l1 = 700000//N
+l2 = 700000//M
+if (l1>(l2+10)):
+  print(l1)
+else:
+  print(l2)</code>
+            </pre>
+        </div>
     </body>
 
 </html>
