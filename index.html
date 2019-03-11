@@ -1059,11 +1059,11 @@ print(round(madre,2))</code>
         <div class="card-panel">
             <span>Escriba un programa en python 3 que solicite por consola tres números enteros N, M y W, luego utilice los números ingresados en el siguiente ejercicio:
 
-Imprima los tres números de mayor a menor.
+Imprima los tres números ingresados de mayor a menor.
 
 NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
 
-NOTA2: El programa debe mostrar como resultado exclusivamente los números indicados, no debes contener letras ni enunciados adicionales que lo acompañen.
+NOTA2: El programa debe mostrar como resultado exclusivamente los números indicados, no debe contener letras ni enunciados adicionales que lo acompañen.
 
 NOTA3: Asegúrese de imprimir los números como lo indica los ejemplos.</span>
         </div>
@@ -1292,14 +1292,15 @@ NOTA3: Asegúrese de imprimir las salidas como lo indica los ejemplos. Tenga en 
                 <code>
 N = int(input("Ingrese un numero entero \n"))
 M = int(input("Ingrese un numero entero \n"))
-if N<200 and N>10000:
+if N<200 and M>10000:
     print("Grado 8")
-elif N<200:
-    print("Grado 6")
-elif M>10000:
-    print("Grado 7")
+elif N<200 or M>10000:
+    if N<200:
+        print("Grado 6")
+    elif M>10000:
+        print("Grado 7")
 else:
-    print("Grado 5") </code>
+    print("Grado 5")</code>
             </pre>
         </div>
         
@@ -1978,12 +1979,20 @@ elif a%2!=0:
             </pre>
         </div>
         <div class="card-panel">
-            <span>------------enunciado---------------</span>
+            <span>Escriba un programa en python 3 que solicite por consola dos números reales, el primer número corresponde a la altura de un cilindro y el segundo número corresponde al radio de este. Calcule y muestre el volumen del cilindro. Para este ejercicio considere π = 3.14
+
+NOTA: El mensaje al solicitar la entrada debe ser: "Ingrese un numero real \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "real".
+
+</span>
         </div>
         <div class="codigo">
             <pre>
                 <code>
------------codigo--------</code>
+n1 = float(input("Ingrese un numero real \n"))
+n2 = float(input("Ingrese un numero real \n"))
+areab = pow(n2,2)*3.14
+volumen = n1*areab
+print(volumen)</code>
             </pre>
         </div>
         <div class="card-panel">
