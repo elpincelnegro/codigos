@@ -2985,6 +2985,32 @@ c = math.floor((N-48)/2)
 print(c)</code>
             </pre>
         </div>
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un texto N de más de 10 caracteres y un entero M luego utilice el texto número ingresado en el siguiente ejercicio:
+
+Cuente la cantidad de caracteres que tiene el texto N. Si la cantidad de caracteres, es un multiplo de M, cuente la cantidad de apariciones del caracter "a" dentro de N. Si la cantidad de apariciones de "a" es par, imprima por pantalla N. Si la cantidad de apariciones de "a" no es par, imprima por pantalla "No es par". Si la cantidad de caracteres de N no es multiplo de M, imprima los primeros 10 caracteres de N.
+
+NOTA1: El mensaje al solicitar la entradas debe ser: "Ingrese un texto \n", "Ingrese un numero entero \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = input("Ingrese un texto \n")
+M = int(input("Ingrese un numero \n"))
+c = len(N)
+if c%M==0:
+  a = N.count("a")
+  if a%2==0:
+    print(N)
+  else:
+    "No es par"
+else:    
+  print(N[:10])  </code>
+            </pre>
+        </div>
     </body>
 
 </html>
