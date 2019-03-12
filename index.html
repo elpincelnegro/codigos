@@ -3198,6 +3198,95 @@ M = M[::-1]
 print((len(M))-M.find("d")-1)</code>
             </pre>
         </div>
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros N y M, luego utilice los números ingresados en el siguiente ejercicio:
+
+La siguiente imagen muestra el riesgo que tiene una persona de sufrir enfermedades coronarias:
+
+
+Imprima el riesgo de una persona que tiene un IMC de N y M años.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Asegúrese de imprimir las salidas como lo indica los ejemplos. Tenga en cuenta las mayúsculas, minúsculas y espacios que se indican para el texto de salida. 
+
+</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = int(input("Ingrese un numero entero \n"))
+M = int(input("Ingrese un numero entero \n"))
+if N<22 and M<45:
+    print("bajo")
+elif N<22 and M>=45:
+    print("medio")
+elif N>=22 and M<45:
+    print("medio")
+elif N>=22 and M>=45:
+    print("alto") </code>
+            </pre>
+            
+            <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite por consola un texto M, el cual contiene un día de la semana en su interior. La persona que envía los textos, le gusta mezclar mayúsculas y minúsculas en sus escritos, entonces podría haber (o no) un SabaDO, SaBAdO, etc... en cualquier día de la semana. El programa debe buscar el día de la semana que esta escrito en el texto e imprimirlo por pantalla, bien escrito con la primera letra en mayúscula y el resto en minúscula).
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un texto \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "texto".
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+M = str(input("Ingrese un texto \n")).lower()
+d = ["lunes","martes","miercoles","jueves","viernes","sabado","domingo"]
+for i in d:
+  if i in M:
+    print(i.capitalize())
+    break</code>
+            </pre>
+            <div class="card-panel">
+            <span>Cree una función en python 3 llamada Promedio, que reciba como parámetro una lista con una cantidad desconocida de elementos (Todos numéricos), dichos elementos corresponden a las notas de un estudiante. La función debe calcular el promedio del estudiante, si el promedio es por lo menos 3.0, debe imprimir por pantalla "Aprueba", en caso contrario, imprima por pantalla "No aprueba".
+
+
+NOTA1: La función debe llamarse explicitamente como se indica en el enunciado del ejercicio.
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: El código solicitado no requiere lectura externa de datos (input) ni invocar la función.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+def Promedio(c):
+    prom = sum(c)/(len(c))
+    if prom>=3.0:
+        print("Aprueba")
+    else:
+        print("No aprueba")</code>
+            </pre>
+            <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+Margoth y Diana han trabajado juntas durante 38 días ganando en total N pesos. Si Diana gana 50.000 pesos en dos días, calcule e imprima cuánto dinero cobra Margoth por 90 días de trabajo aproximado a DOS cifras decimales.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Redondear la respuesta a dos cifras decimales. Utilice la función round().</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = int(input("Ingrese un numero entero \n"))
+print(round(((N-38*(25000))/38)*90,2))</code>
+            </pre>
+        </div>
     </body>
 
 </html>
