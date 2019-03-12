@@ -3011,6 +3011,130 @@ else:
   print(N[:10])  </code>
             </pre>
         </div>
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola una lista N, luego utilice la lista ingresada en el siguiente ejercicio:
+
+La lista ingresada contiene en la primera y segunda posición dos números enteros. Además, en su tercera posición contiene uno de los siguientes símbolos: +, -, *, /
+
+Construya un programa que simule una calculadora e imprima el resultado de la operación (según el símbolo de la tercera posición) implementada a los dos primeros números de la lista.
+
+En el caso de la división, imprima el resultado de la división con una cifra decimal. Utilice la función round().
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese una lista \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "lista".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA3: Asegúrese de imprimir los números como lo indica los ejemplos. Note que para las operaciones de +,- y * el resultado es un número entero.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+lista = eval(input("Ingrese una lista \n"))
+N = lista[0]
+M = lista[1]
+O = lista[2]
+if O=="+":
+    print(N+M)
+elif O=="-":
+    print(N-M)
+elif O=="*":
+    print(N*M)
+elif O=="/":
+    print(round(N/M,1))</code>
+            </pre>
+        </div>
+        
+         <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite dos palabras M y N por consola (En las cuales no se repite un carácter dentro de una palabra). Posteriormente intercambie el primer carácter de M por el primer carácter de N, así mismo el primer carácter de N por el primer carácter de M. Repita el proceso anterior para la ultimo carácter de cada palabra. Guarde las dos nuevas palabras e imprimalas por pantalla.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese una palabra \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "palabra".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+M = input("Ingrese una palabra \n")
+N = input("Ingrese una palabra \n")
+F = N[0]+M[1:len(M)-1]+N[len(N)-1]
+F2 = M[0]+N[1:len(N)-1]+M[len(M)-1]
+print(F)
+print(F2)</code>
+            </pre>
+        </div>
+        
+         <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite por consola dos variables M,N (Pueden ser números o texto. N nunca será cero). Posteriormente, usando el manejo de errores, imprima por pantalla la división entera de M/N. En caso de que alguno o ambos sean texto mostrar el mensaje de error "No se puede operar con texto".
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un valor \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+M = (input("Ingrese un valor \n"))
+N = (input("Ingrese un valor \n"))
+try:
+  M = int(M)
+  N = int(N)
+  print(M//N)
+except:
+    print("No se puede operar con texto") </code>
+            </pre>
+        </div>
+        
+         <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un diccionario N Y una lista númerica M, luego utilice la lista y el diccionario en el siguiente ejercicio:
+
+El diccionario M contiene los costos de 3 servicios con claves "Celular","Television","Internet". Verifique si la suma de los costos que almacena el diccionario es igual a la suma de los elementos de la lista M. Si los costos son iguales a la suma de la lista, verifique si los costos son mayores a 100000. Si los costos son mayores a 100000, añada al diccionario la clave "Costo" y guarde el valor 100000 en dicha clave e imprima el diccionario por pantalla. Si los costos no son mayores a 100000, añada al diccionario la clave "CostoTotal" y almanece en ella el total del costo de los servicios e imprima el diccionario por pantalla. Si la suma de los costos que almacena el diccionario es diferente a la suma de los elementos de la lista, añada al diccionario la clave "Lista" y guarde en ella la lista M, posteriormente imprima el diccionario por pantalla.
+
+NOTA1: El mensaje al solicitar la entradas debe ser: "Ingrese un diccionario \n", "Ingrese una lista \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = eval(input("Ingrese un diccionario \n"))
+M = eval(input("Ingrese una lista \n"))
+S = 0
+for i in N:
+  S +=N[i]
+S2 = sum(M)
+if S==S2:
+  if S>100000:
+    N["Costo"] = 100000
+    print(N)
+  else:
+    N["CostoTotal"] = S
+    print(N)
+else:
+  N["Lista"] = M
+  print(N)</code>
+            </pre>
+        </div>
+        
+         <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola dos números enteros, N y M respectivamente. Luego utilice el número ingresado en el siguiente ejercicio:
+
+Seis personas pueden vivir en una mansión durante 12 días por 792 €. Calcule e imprima la cantidad de plata que costará la mansión de N personas durante M días.
+
+NOTA1: El mensaje al solicitar cada entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = int(input("Ingrese un numero entero \n"))
+M = int(input("Ingrese un numero entero \n"))
+print((792*N*M)/(72))</code>
+            </pre>
+        </div>
     </body>
 
 </html>
