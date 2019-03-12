@@ -3135,6 +3135,69 @@ M = int(input("Ingrese un numero entero \n"))
 print((792*N*M)/(72))</code>
             </pre>
         </div>
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número entero N, luego utilice el número ingresado en el siguiente ejercicio:
+
+La siguiente tabla muestra la equivalencia que tienen los números 1-7 con los días de la semana. Imprima la equivalencia del número N de acuerdo a la siguiente tabla:
+
+semana
+
+En caso de que el número ingresado N no tenga equivalencia en la anterior tabla, imprima “No tiene”.
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+NOTA2: El programa debe mostrar como resultado EXACTAMENTE el texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen. Tenga en cuenta las mayúsculas y minúsculas que se indican para el texto de salida.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+l = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
+N = int(input("Ingrese un numero entero \n"))
+print("No tiene" if N>7 or N<1 else l[N-1])</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite dos enteros M,N por consola y los use en el siguiente ejercicio. Usando el manejo de errores, muestre por pantalla la division entera de M entre N. En caso de N ser 0, muestre el error "No se puede dividir por cero" y el valor de M.
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un numero entero \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "entero".
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+
+</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+M = int(input("Ingrese un numero entero \n"))
+N = int(input("Ingrese un numero entero \n"))
+try:
+    print(M//N)
+except:
+    print("No se puede dividir por cero")
+    print(M)</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite una palabra M. Luego, encuentre e imprima el índice de la última aparición de la letra "d" en la palabra M.
+
+NOTA1: El mensaje al solicitar M debe ser: "Ingrese una palabra \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "palabra".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+M = input("Ingrese una palabra \n")
+M = M[::-1]
+print((len(M))-M.find("d")-1)</code>
+            </pre>
+        </div>
     </body>
 
 </html>
