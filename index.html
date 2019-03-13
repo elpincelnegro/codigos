@@ -3318,6 +3318,55 @@ def Calculadora(lista):
     print(round(lista[0]/lista[1],1))</code>
             </pre>
         </div>
+        
+        <div class="card-panel">
+            <span>Escriba un programa en python 3 que solicite por consola un número N, luego utilice el número ingresado en el siguiente ejercicio:
+
+N corresponde al valor por minuto de encender un bombillo en una casa. Considerando que el bombillo esta encendido durante 6 horas, calcule el precio total a pagar. Si el precio total a pagar supera los 234390.22 pesos, imprima por pantalla "Sobrecosto". En caso contrario, imprima por pantalla "Promedio"
+
+
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese un numero \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" .
+
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente el número o texto indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = float(input("Ingrese un numero \n"))
+c = 360*N
+print("Sobrecosto" if c>234390.22 else "Promedio")</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite dos strings N,M por consola. El string N corresponde a un texto y el string M corresponde a una palabra. El programa debe buscar la palabra M dentro del string N. Si la palabra M no se encuentra dentro del texto, se debe imprimir por pantalla el texto al revés en mayúscula (de atrás hacia adelante). Si la palabra M sí se encuentra dentro del texto, se debe imprimir por pantalla la palabra que este inmediatamente después de esta con la primera letra en mayúscula. Se puede estar seguro que nunca se trata de buscar la última palabra del texto (Pues no tiene siguiente).
+
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un string \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "string".
+
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = input("Ingrese un string \n")
+M = input("Ingrese un string \n")
+if not M in N:
+  print(N[::-1].upper())
+else:
+  N = list(N.split())
+  for i in range(len(N)):
+    if M==N[i]:
+      print(N[i+1].capitalize())
+      break</code>
+            </pre>
+        </div>
     </body>
 
 </html>
