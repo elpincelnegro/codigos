@@ -3290,6 +3290,34 @@ N = int(input("Ingrese un numero entero \n"))
 print(round(((N-38*(25000))/38)*90,2))</code>
             </pre>
         </div>
+        
+         <div class="card-panel">
+            <span>Cree una funcion en python 3 llamada Calculadora, que reciba como parámetro una lista compuesta por 3 elementos. Los dos primeros elementos de la lista corresponden a números enteros y el tercer elemento es un operador (*,/,+,-), la función debe realizar la operación que indique el tercer elemento, entre el primer y segundo elemento. Ejemplo: [3,4,"+"] significa 3+4. Finalmente debe imprimir el resultado de dicha operación. En caso de que la operación sea una división, el resultado debe aproximarse a 1 cifra decimal usando la función round().
+
+
+
+NOTA1: La función debe llamarse explicitamente como se indica en el enunciado del ejercicio.
+
+NOTA2: Note que las salidas siempre son números enteros, excepto en la división.
+
+NOTA3: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.
+
+NOTA4: El código solicitado no requiere lectura externa de datos (input) ni invocar la función.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+def Calculadora(lista):
+  if lista[2]=="+":
+    print(lista[0]+lista[1])
+  elif lista[2]=="-":
+    print(lista[0]-lista[1])
+  elif lista[2]=="*":
+    print(lista[0]*lista[1])
+  elif lista[2]=="/":
+    print(round(lista[0]/lista[1],1))</code>
+            </pre>
+        </div>
     </body>
 
 </html>
