@@ -3432,6 +3432,59 @@ N = N.replace(".","",2)
 print(N)</code>
             </pre>
         </div>
+        
+         <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite un texto M por consola, posteriormente imprima una lista que contenga en primera posición la vocal (En mayúscula) del alfabeto que más veces aparece en el texto (Sea en mayúscula o en minúscula) y en segunda posición la cantidad de veces que aparece. En caso de haber dos vocales con igual cantidad máxima de apariciones, imprima la lista correspondiente a la que primero este en el orden ("a","e","i","o","u"). El número de apariciones debe ser un número entero.
+
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un texto \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "texto".
+
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+T = input("Ingrese un texto \n").lower()
+vocales = ["a","e","i","o","u"]
+m = -1
+v = ""
+for i in vocales:
+  t = T.count(i)
+  if t>m:
+    m = t
+    v = i
+print([v.upper(),m])</code>
+            </pre>
+        </div>
+        
+        <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite 2 strings por consola M,N. El string M corresponde a un texto y el string N corresponde a una letra. El programa debe buscar cuantas veces aparece la letra N (respetando mayúsculas y minúsculas) en el texto M. Si la cantidad de apariciones es un número par, reemplace la letra por un numero 5. Si la cantidad de apariciones es un número impar, reemplace cada aparición de la letra por el número total de apariciones. Finalmente imprima todo el texto modificado por pantalla. En caso de que no se encuentren apariciones de la letra, imprima todo el texto M al reves (De atrás hacia adelante). 
+
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un string \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "string".
+
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+s = input("Ingrese un texto \n")
+l = input("Ingrese un texto \n")
+c = s.count(l)
+if c%2==0:
+  s=s.replace(l,"5")
+  print(s)
+else:
+  s = s.replace(l,str(c))
+  print(s)</code>
+            </pre>
+        </div>
     </body>
 
 </html>
