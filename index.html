@@ -3367,6 +3367,35 @@ else:
       break</code>
             </pre>
         </div>
+        
+        <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite un texto M. Luego, convierta todos los caracteres del texto M a mayúsculas e imprima el nuevo texto con la modificación indicada.
+NOTA1: El mensaje al solicitar M debe ser: "Ingrese un texto \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "texto".</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+M = input("Ingrese un texto \n").upper()
+print(M)</code>
+            </pre>
+        </div>
+        <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite una lista M de números enteros por consola. Posteriormente, usando el manejo de errores, imprima el número que esta en la cuarta posición. En caso de que dicha posición no exista el error que se debe mostrar por pantalla es "Indice no existe".
+
+NOTA1: El mensaje al solicitar la entrada debe ser: "Ingrese una lista \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "lista".
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+L = eval(input("Ingrese una lista \n"))
+try:
+  print(L[3])
+except:
+  print("Indice no existe") </code>
+            </pre>
+        </div>
     </body>
 
 </html>
