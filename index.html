@@ -3804,6 +3804,33 @@ else:
             </pre>
         </div>
         
+        <div class="card-panel">
+            <span>
+Cree un programa en python 3 que solicite un texto M por consola, posteriormente verifique si en dicho texto (En el texto no vienen flotantes y solo números entre 0-9), están presentes todos los números entre 1 y 5 (incluidos ambos extremos). En caso de que todos los números estén presentes, realice la sumatoria de estos  y muéstrela por pantalla. En caso contrario, imprima el número entero 0 por pantalla. La sumatoria impresa debe ser un entero.
+
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese un texto \n", tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "texto".
+
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = input("Ingrese un texto \n")
+suma = 0
+if "1" in N and "2" in N and "3" in N and "4" in N and"5" in N:
+  for i in range(len(N)):
+    if N[i].isdigit():
+      suma+=int(N[i])
+  print(suma)
+else:
+  print(0)      </code>
+            </pre>
+        </div>
+        
         
     </body>
 
