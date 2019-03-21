@@ -3743,6 +3743,34 @@ print(N[::2])  </code>
             </pre>
         </div>
         
+        <div class="card-panel">
+            <span>Cree un programa en python 3 que solicite por consola una lista N y un string M. La lista corresponde a los datos de una persona, teniendo en su primera posición el nombre, en la segunda su cédula y en la tercera su país de origen. El string M corresponde a una contraseña personal, de la cual se debe analizar su seguridad. Para que la contraseña sea segura, debe tener más de 6 caracteres. El nombre de la persona (Sea en mayúscula, minúscula o combinadas), no puede aparecer en ella. Su numero de cédula tampoco debe aparecer en ella. Su país de origen tampoco debe aparecer en ella (Sea en mayúscula, minúscula o combinadas). Todas las condiciones de seguridad deben cumplirse para que la contraseña sea segura. Imprima por pantalla "Segura" o "No segura" según sea el caso.
+
+
+
+NOTA1: El mensaje al solicitar las entradas debe ser: "Ingrese una lista \n", "Ingrese un string \n" tal como aparece entre comillas incluyendo la mayúscula inicial, el espacio y el "\n" después de "lista", "string".
+
+
+
+NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no debe contener letras ni enunciados adicionales que lo acompañen.</span>
+        </div>
+        <div class="codigo">
+            <pre>
+                <code>
+N = eval(input("Ingrese una lista \n"))
+M = input("Ingrese un string \n").lower()
+e = ""
+if len(M)>6:
+  if not(N[0].lower() in M) and not(str(N[1]) in M) and not(N[0].lower() in M):
+    e = ("Segura") 
+  else:
+    e = "No segura"
+else:
+  e = "No segura"
+print(e)    </code>
+            </pre>
+        </div>
+        
         
     </body>
 
