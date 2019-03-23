@@ -3559,14 +3559,14 @@ NOTA2: El programa debe mostrar como resultado exclusivamente lo indicado, no de
                 <code>
 N = (input("Ingrese un string \n"))
 M = (input("Ingrese un string \n"))
-cont = 0
+c=0
 for i in range(len(N)):
-  if N.count(N[i])<=M.count(N[i]):
-    cont+=1
-  else:
-    break
-print("Si" if cont==len(N) else "No") 
-</code>
+    if N[i] in M:
+      c=c+1
+if c==len(N):
+    print("Si")
+else:
+    print("No")</code>
             </pre>
         </div>
         
@@ -3823,11 +3823,11 @@ N = input("Ingrese un texto \n")
 suma = 0
 if "1" in N and "2" in N and "3" in N and "4" in N and"5" in N:
   for i in range(len(N)):
-    if N[i].isdigit():
+    if N[i]=="1" or N[i]=="2" or N[i]=="3" or N[i]=="4" or N[i]=="5":
       suma+=int(N[i])
   print(suma)
 else:
-  print(0)      </code>
+  print(0)</code>
             </pre>
         </div>
         
